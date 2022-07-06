@@ -1,0 +1,18 @@
+[package]
+name = "scrap-ffi"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+crate-type = ["cdylib", "staticlib"]
+
+[dependencies]
+scrap = {path = "../scrap"}
+tokio = {version="1.18", features=["rt-multi-thread"]}
+
+ffi_helpers = "0.3.0"
+allo-isolate = "0.1"
+
+[build-dependencies]
+cbindgen = "0.23.0"
+dart-bindgen = "0.1"
